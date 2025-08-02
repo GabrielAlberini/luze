@@ -25,7 +25,7 @@ const TeamSection = () => {
               <h3>Gabriel Alberini</h3>
               <p className="team-role">Producción y Fabricación</p>
               <p className="team-description">
-                Este soy yo, y me encargo de realizar las alfombras, algunas de mis tareas son: plasmar el diseño en el bastidor, "tuftear" la alfombra, recortarla del lienzo y colocarle la tela que va contra el piso.
+                Soy Gabriel, responsable del proceso de elaboración de las alfombras. Algunas de mis tareas incluyen trasladar el diseño al bastidor, realizar el tufteado, recortar la alfombra del lienzo y aplicar la base de tela que se adhiere al piso.
               </p>
             </div>
           </div>
@@ -44,7 +44,7 @@ const TeamSection = () => {
               <h3>Luciana Giné</h3>
               <p className="team-role">Gestión y Contenido</p>
               <p className="team-description">
-                Ella es Luciana, la chica más hermosa del mundo y se encargar de la logistica del taller como controlar el obillado de la lana, el stock y el estado de los materiales. Además es la CM del emprendimiento creando contenido para Intasgram. Miren que linda que es!!!!!
+                Luciana se encarga de la gestión del taller, controlando el devanado de lana, el stock y el estado de los materiales. Además, es la responsable de la comunicación del emprendimiento, creando y gestionando el contenido para nuestras redes sociales, especialmente en Instagram.
               </p>
             </div>
           </div>

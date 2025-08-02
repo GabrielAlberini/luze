@@ -6,19 +6,13 @@ const HeroSection = () => {
       <div className="hero-content">
         <div className="container">
           <div className="hero-text">
-            <h1>LUZÉ RUGS</h1>
-            <p>Alfombras artesanales realizadas con la técnica de Tufting Gun</p>
+            <h1>Fabrica de alfombras artesanales</h1>
+            <p>Realizadas con la técnica de Tufting Gun</p>
             <a href='/#filters' className="btn btn-primary btn-large">
               Ver Catálogo
             </a>
           </div>
         </div>
-      </div>
-      <div className="hero-image">
-        <img
-          src="./fondo.jpeg"
-          alt="Alfombras artesanales"
-        />
       </div>
     </section>
   );

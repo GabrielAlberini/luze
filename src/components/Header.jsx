@@ -28,7 +28,6 @@ const Header = () => {
               className="social-link"
             >
               <Instagram size={24} />
-              <span className="social-text">Instagram</span>
             </a>
           </nav>
         </div>

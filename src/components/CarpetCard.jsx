@@ -6,7 +6,7 @@ const CarpetCard = ({ carpet }) => {
       <div className="card-image">
         <img src={carpet.image} alt={carpet.name} />
         <div className={`availability-badge ${carpet.available ? 'available' : 'not-available'}`}>
-          {carpet.available ? 'Disponible' : 'Agotado'}
+          {carpet.available ? 'Disponible' : 'Vendida'}
         </div>
       </div>
 

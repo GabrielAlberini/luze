@@ -138,7 +138,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-lg) 0;
+  padding: 15px;
 }
 
 .logo-container {
@@ -240,10 +240,11 @@ p {
 /* Hero Section */
 .hero-section {
   position: relative;
+  background-image: url("./assets/fondo-mobile.jpeg");
+  background-size: cover;
   min-height: 70vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
   overflow: hidden;
 }
 
@@ -1209,7 +1210,7 @@ p {
 }
 
 .footer-info-item svg {
-  color: var(--primary-color);
+  color: var(--bg-primary);
 }
 
 .footer-links {
@@ -1235,7 +1236,7 @@ p {
 }
 
 .footer-link svg {
-  color: var(--primary-color);
+  color: var(--bg-primary);
 }
 
 .footer-bottom {
