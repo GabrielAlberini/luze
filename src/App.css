@@ -291,7 +291,7 @@ p {
   .hero-section {
     min-height: 60vh;
     padding: 20px;
-    background-image: url("./fondo-mobile.jpeg");
+    background-image: url("./assets/fondo-mobile.jpeg");
     background-size: cover;
   }
 
