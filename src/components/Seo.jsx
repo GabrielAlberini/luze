@@ -1,5 +1,5 @@
 // src/components/Seo.jsx
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 const Seo = ({
   title = 'Luzé Rugs | Alfombras artesanales hechas a mano',
