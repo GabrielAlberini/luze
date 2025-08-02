@@ -269,17 +269,6 @@ p {
   margin-bottom: var(--spacing-xl);
 }
 
-.hero-image {
-  position: absolute;
-  right: -10%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50%;
-  height: 80%;
-  opacity: 0.3;
-  z-index: 1;
-}
-
 .hero-image img {
   width: 100%;
   height: 100%;
@@ -316,76 +305,6 @@ p {
     color: white;
   }
 }
-
-/* @media (max-width: 768px) {
-  .hero-section {
-    min-height: 50vh;
-    text-align: center;
-    padding: var(--spacing-xl) 0;
-  }
-
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hero-text {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .hero-text h1 {
-    font-size: 2.2rem;
-    margin-bottom: var(--spacing-md);
-  }
-
-  .hero-text p {
-    font-size: 0.95rem;
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .hero-image {
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: none;
-    width: 100%;
-    height: 200px;
-    margin-top: var(--spacing-lg);
-    opacity: 0.4;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-  }
-} */
-
-/* @media (max-width: 480px) {
-  .hero-section {
-    min-height: 45vh;
-    padding: var(--spacing-lg) 0;
-  }
-
-  .hero-text h1 {
-    font-size: 1.8rem;
-    line-height: 1.2;
-  }
-
-  .hero-text p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-
-  .hero-image {
-    height: 150px;
-    margin-top: var(--spacing-md);
-  }
-
-  .btn-large {
-    padding: var(--spacing-sm) var(--spacing-lg);
-    font-size: 1rem;
-  }
-} */
 
 /* Filter Bar */
 .filter-bar {
@@ -910,11 +829,6 @@ p {
     gap: var(--spacing-lg);
   }
 
-  .hero-image {
-    right: -20%;
-    width: 60%;
-  }
-
   .info-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-lg);
@@ -967,17 +881,6 @@ p {
   .hero-section {
     min-height: 60vh;
     text-align: center;
-  }
-
-  .hero-image {
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: none;
-    width: 100%;
-    height: 200px;
-    margin-top: var(--spacing-lg);
-    opacity: 0.5;
   }
 
   .filter-content {
