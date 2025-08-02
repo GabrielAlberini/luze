@@ -1,8 +1,8 @@
-import React from 'react';
 import { useCarpets } from '../hooks/useCarpets';
 import { deleteCarpet } from '../services/carpetService';
 import CarpetTable from '../components/admin/CarpetTable';
 import AdminLayout from '../components/admin/AdminLayout';
+import Seo from '../components/Seo';
 
 const AdminDashboard = () => {
   const { carpets, loading, error, refreshCarpets } = useCarpets();
@@ -20,7 +20,7 @@ const AdminDashboard = () => {
           imagePublicId = publicIdWithExt.split('.')[0];
         }
       }
-      
+
       await deleteCarpet(id, imagePublicId);
       refreshCarpets();
     } catch (error) {
@@ -32,6 +32,11 @@ const AdminDashboard = () => {
   if (error) {
     return (
       <AdminLayout>
+        <Seo
+          title="Error en el panel | Luzé Rugs"
+          description="Ocurrió un error al cargar los datos del panel de administración."
+          noIndex={true}
+        />
         <div className="error-container">
           <h2>Error al cargar los datos</h2>
           <p>{error}</p>
@@ -45,7 +50,12 @@ const AdminDashboard = () => {
 
   return (
     <AdminLayout>
-      <CarpetTable 
+      <Seo
+        title="Panel de administración | Luzé Rugs"
+        description="Área interna para gestionar el catálogo de alfombras."
+        noIndex={true}
+      />
+      <CarpetTable
         carpets={carpets}
         onDelete={handleDelete}
         loading={loading}

@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import TeamSection from '../components/TeamSection';
 import { useCarpets } from '../hooks/useCarpets';
 import { categories } from '../services/categories';
+import Seo from '../components/Seo';
 
 const HomePage = () => {
   const { carpets, loading } = useCarpets();
@@ -29,6 +30,10 @@ const HomePage = () => {
 
   return (
     <div className="App">
+      <Seo
+        title="Luzé Rugs | Fabrica de alfombras artesanales"
+        description="Explorá nuestra colección de alfombras tufting hechas a mano. Diseños únicos, arte textil y decoración moderna."
+      />
       <Header />
       <HeroSection />
       <TeamSection />
