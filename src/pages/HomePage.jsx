@@ -1,18 +1,13 @@
-import React, { useState, useMemo } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import FilterBar from './components/FilterBar';
-import CatalogSection from './components/CatalogSection';
-import AdminDashboard from './pages/AdminDashboard';
-import AddCarpet from './pages/AddCarpet';
-import EditCarpet from './pages/EditCarpet';
-import { useCarpets } from './hooks/useCarpets';
-import { categories } from './services/categories';
-import './App.css';
-import InfoSection from './components/InfoSection';
-import Footer from './components/Footer';
-import TeamSection from './components/TeamSection';
+import { useState, useMemo } from 'react';
+import Header from '../components/Header';
+import HeroSection from '../components/HeroSection';
+import FilterBar from '../components/FilterBar';
+import CatalogSection from '../components/CatalogSection';
+import InfoSection from '../components/InfoSection';
+import Footer from '../components/Footer';
+import TeamSection from '../components/TeamSection';
+import { useCarpets } from '../hooks/useCarpets';
+import { categories } from '../services/categories';
 
 const HomePage = () => {
   const { carpets, loading } = useCarpets();
@@ -53,17 +48,4 @@ const HomePage = () => {
   );
 };
 
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/admin/add" element={<AddCarpet />} />
-        <Route path="/admin/edit/:id" element={<EditCarpet />} />
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
+export default HomePage;
