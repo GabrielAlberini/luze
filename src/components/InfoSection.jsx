@@ -18,8 +18,7 @@ const InfoSection = () => {
             <h3>Precio Personalizado</h3>
             <p>
               El precio de cada alfombra varía según la <strong>cantidad de colores</strong> y
-              la <strong>complejidad de la trama</strong>. Cada pieza es única y requiere
-              diferentes niveles de detalle y tiempo de elaboración.
+              la <strong>complejidad de la trama</strong>.
             </p>
           </div>
 
@@ -29,9 +28,8 @@ const InfoSection = () => {
             </div>
             <h3>Reproducimos Diseños</h3>
             <p>
-              ¿Te gustó un diseño que ya se vendió? <strong>¡No hay problema!</strong>
-              Podemos recrear cualquier alfombra de nuestro catálogo. Cada pieza
-              artesanal tendrá sus propias características únicas.
+              ¿Te gustó un diseño que ya se vendió? <strong>¡No hay problema! </strong>
+              Podemos recrear cualquier alfombra de nuestro catálogo.
             </p>
           </div>
 
@@ -41,8 +39,9 @@ const InfoSection = () => {
             </div>
             <h3>Cálculo del Precio</h3>
             <p>
-              Nuestro precio base es: <strong>Materia prima × 3</strong>
+              Nuestro precio base es:<br></br> <strong>Materia prima × 3</strong>
             </p>
+            <p>Luego de este calculo le sumamos un porcentaje dependiendo de la difucultad del diseño.</p>
             <div className="pricing-breakdown">
               <div className="pricing-item">
                 <span className="difficulty easy">Fácil</span>
@@ -57,13 +56,13 @@ const InfoSection = () => {
                 <span className="percentage">+20%</span>
               </div>
             </div>
+            <p>Por ejemplo: para <strong>$20000</strong> de materia prima y un diseño de complejidad <span className='difficulty medium'>medio</span> el total es de <strong>$72000</strong></p>
           </div>
         </div>
 
         <div className="info-footer">
           <p>
-            Cada alfombra es tejida a mano con técnicas tradicionales,
-            garantizando calidad y autenticidad en cada pieza.
+            Contactame via Whatsapp y charlamos sobre la idea y las posibilidad que existen para obtener tu Luzé Rugs.
           </p>
           <a
             href="https://wa.me/543498528087?text=Hola Luzé! me gustaría conocer más sobre sus alfombras artesanales."
@@ -71,7 +70,7 @@ const InfoSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Consultar Precios
+            Enviar mensaje por Whatsapp
           </a>
         </div>
       </div>
