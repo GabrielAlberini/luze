@@ -102,8 +102,18 @@ p {
   color: white;
 }
 
+.btn-secondary {
+  background-color: var(--bg-primary);
+  color: var(--primary-color);
+}
+
 .btn-primary:hover {
   background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -767,6 +777,11 @@ p {
   margin-bottom: 20px;
 }
 
+.info-card ul,
+.info-card ol {
+  list-style: none;
+}
+
 .pricing-item {
   display: flex;
   justify-content: space-between;
@@ -810,14 +825,15 @@ p {
 .info-footer {
   text-align: center;
   padding: var(--spacing-xl);
-  background: white;
+  background-image: url("./assets/fondo-mobile.jpeg");
+  background-size: cover;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--bg-tertiary);
 }
 
 .info-footer p {
-  color: var(--text-secondary);
+  color: var(--bg-primary);
   font-size: 1.1rem;
   margin-bottom: var(--spacing-lg);
 }
@@ -1134,7 +1150,7 @@ p {
 }
 
 .footer-link:hover {
-  color: var(--primary-color);
+  color: var(--bg-primary);
   transform: translateX(4px);
 }
 

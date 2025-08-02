@@ -17,8 +17,7 @@ const InfoSection = () => {
             </div>
             <h3>Precio Personalizado</h3>
             <p>
-              El precio de cada alfombra varía según la <strong>cantidad de colores</strong> y
-              la <strong>complejidad de la trama</strong>.
+              El valor final de cada alfombra depende de la <strong>cantidad de colores</strong> utilizados y la <strong>complejidad del diseño</strong>.
             </p>
           </div>
 
@@ -29,7 +28,7 @@ const InfoSection = () => {
             <h3>Reproducimos Diseños</h3>
             <p>
               ¿Te gustó un diseño que ya se vendió? <strong>¡No hay problema! </strong>
-              Podemos recrear cualquier alfombra de nuestro catálogo.
+              Comunicate con nosotros y lo volvemos a hacer especialmente para vos.
             </p>
           </div>
 
@@ -37,18 +36,30 @@ const InfoSection = () => {
             <div className="info-icon">
               <Calculator size={32} />
             </div>
-            <h3>Cálculo del Precio</h3>
+
+            <h3>¿Cómo calculamos el precio?</h3>
+
             <p>
-              Nuestro precio base es:<br></br> <strong>Materia prima × 3</strong>
+              El precio final se compone de dos elementos:
             </p>
-            <p>Luego de este calculo le sumamos un porcentaje dependiendo de la difucultad del diseño.</p>
+
+            <ol>
+              <li>
+                <strong>Costo materia prima × 3</strong>: Este es nuestro precio base.
+              </li>
+              <li>
+                <strong>Adicional por dificultad del diseño</strong>: Se suma un porcentaje según la complejidad.
+              </li>
+            </ol>
+
             <div className="pricing-breakdown">
+              <h4>Porcentajes según dificultad</h4>
               <div className="pricing-item">
                 <span className="difficulty easy">Fácil</span>
                 <span className="percentage">+10%</span>
               </div>
               <div className="pricing-item">
-                <span className="difficulty medium">Medio</span>
+                <span className="difficulty medium">Media</span>
                 <span className="percentage">+15%</span>
               </div>
               <div className="pricing-item">
@@ -56,7 +67,18 @@ const InfoSection = () => {
                 <span className="percentage">+20%</span>
               </div>
             </div>
-            <p>Por ejemplo: para <strong>$20000</strong> de materia prima y un diseño de complejidad <span className='difficulty medium'>medio</span> el total es de <strong>$72000</strong></p>
+
+            <div className="example">
+              <h4>Ejemplo</h4>
+              <p>
+                Si la materia prima cuesta <strong>$20.000</strong> y el diseño es de dificultad <span className="difficulty medium">media</span>:
+              </p>
+              <ul>
+                <li>Base: $20.000 × 3 = $60.000</li>
+                <li>Adicional por dificultad media (15%): $9.000</li>
+                <li><strong>Total final: $69.000</strong></li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -66,7 +88,7 @@ const InfoSection = () => {
           </p>
           <a
             href="https://wa.me/543498528087?text=Hola Luzé! me gustaría conocer más sobre sus alfombras artesanales."
-            className="btn btn-primary btn-large"
+            className="btn btn-secondary btn-large"
             target="_blank"
             rel="noopener noreferrer"
           >

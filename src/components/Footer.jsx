@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="logo-container">
               <a href="/">
                 <img
-                  width="120px"
+                  width="240px"
                   height="auto"
                   src="./logo.png"
                   alt="Luzé Rugs Logo"
@@ -18,9 +18,6 @@ const Footer = () => {
                 />
               </a>
             </div>
-            <p className="footer-description">
-              Alfombras artesanales realizadas con la técnica de Tufting Gun
-            </p>
           </div>
 
           <div className="footer-section">
@@ -28,7 +25,7 @@ const Footer = () => {
             <div className="footer-info">
               <div className="footer-info-item">
                 <MapPin size={18} />
-                <span>Argentina</span>
+                <span>San Justo, Santa Fe</span>
               </div>
               <div className="footer-info-item">
                 <Clock size={18} />
