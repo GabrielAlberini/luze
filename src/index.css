@@ -863,6 +863,15 @@ p {
   outline: none;
 }
 
+.info-section select {
+  font-family: "Poppins", sans-serif;
+}
+
+.info-card small {
+  font-style: italic;
+  color: var(--shadow-sm);
+}
+
 .info-card input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 18px;
@@ -883,10 +892,12 @@ p {
 
 .example {
   margin-top: var(--spacing-lg);
-  background: var(--bg-secondary);
+  /* background: var(--bg-secondary); */
+  background: var(--primary-dark);
   padding: var(--spacing-md);
   border-radius: var(--border-radius-sm);
   text-align: left;
+  color: white;
 }
 
 .example ul {

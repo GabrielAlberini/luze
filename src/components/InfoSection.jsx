@@ -77,7 +77,7 @@ const InfoSection = () => {
                 <option value="medium">Media (+15%)</option>
                 <option value="hard">Difícil (+20%)</option>
               </select>
-              <small> (La dificultad final la determinaremos nosotros a partir del diseño que nos compartas)</small>
+              <small>La dificultad final la determinaremos nosotros a partir del diseño que nos compartas.</small>
             </label>
 
             {/* Resultado dinámico */}
