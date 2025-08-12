@@ -743,6 +743,7 @@ p {
 .info-grid {
   display: grid;
   grid-template-columns: 1 fr 1fr 1fr 1fr;
+  /* se mantiene como estaba */
   gap: var(--spacing-xl);
   margin-bottom: var(--spacing-2xl);
 }
@@ -844,6 +845,58 @@ p {
   font-size: 1.1rem;
 }
 
+/* 🎯 Estilos para calculadora interactiva */
+.info-card label {
+  display: block;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+  font-weight: 500;
+  text-align: left;
+}
+
+.info-card input[type="range"] {
+  width: 100%;
+  appearance: none;
+  height: 6px;
+  border-radius: 5px;
+  background: var(--bg-secondary);
+  outline: none;
+}
+
+.info-card input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.info-card select {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--bg-tertiary);
+  font-size: 1rem;
+  background-color: white;
+}
+
+.example {
+  margin-top: var(--spacing-lg);
+  background: var(--bg-secondary);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  text-align: left;
+}
+
+.example ul {
+  padding-left: 0;
+}
+
+.example li {
+  margin-bottom: var(--spacing-xs);
+}
+
 .info-footer {
   text-align: center;
   padding: var(--spacing-xl);
@@ -862,11 +915,6 @@ p {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .carpet-grid {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
-  }
-
   .info-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-lg);
@@ -880,6 +928,7 @@ p {
     grid-column: 1;
   }
 }
+
 
 @media (max-width: 768px) {
   .container {
