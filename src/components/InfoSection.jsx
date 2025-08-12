@@ -61,8 +61,8 @@ const InfoSection = () => {
               <strong>Costo de materia prima:</strong> ${materialCost.toLocaleString()}
               <input
                 type="range"
-                min="5000"
-                max="100000"
+                min="2000"
+                max="50000"
                 step="500"
                 value={materialCost}
                 onChange={(e) => setMaterialCost(Number(e.target.value))}
