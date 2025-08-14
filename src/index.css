@@ -30,6 +30,18 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  /* Optimizar tablas en móvil */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Mejorar cards en móvil */
+  .mobile-card {
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
 }
 
 /* Mejoras para tablets */
@@ -37,6 +49,11 @@
   .tablet-padding {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  /* Optimizar formularios en tablet */
+  .tablet-form-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
@@ -58,4 +75,73 @@ textarea:focus {
 /* Animaciones suaves para transiciones */
 .transition-all {
   transition: all 0.2s ease-in-out;
+}
+
+/* Estilos específicos para el panel de administración */
+.admin-container {
+  min-height: calc(100vh - 64px);
+}
+
+/* Mejorar la experiencia de scroll en móvil */
+.admin-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Optimizar inputs en móvil */
+@media (max-width: 640px) {
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    font-size: 16px; /* Evita zoom en iOS */
+  }
+}
+
+/* Mejorar la legibilidad de las tablas en móvil */
+@media (max-width: 1024px) {
+  .mobile-table {
+    font-size: 0.875rem;
+  }
+  
+  .mobile-table th,
+  .mobile-table td {
+    padding: 0.5rem;
+  }
+}
+
+/* Estilos para el menú móvil */
+.mobile-menu-overlay {
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Mejorar la experiencia de carga */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Mejorar la experiencia de hover en dispositivos táctiles */
+@media (hover: none) {
+  .hover-effect {
+    transition: none;
+  }
+  
+  .hover-effect:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
