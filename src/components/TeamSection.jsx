@@ -29,9 +29,6 @@ const TeamSection = () => {
               <p className="text-blue-600 font-semibold uppercase tracking-wide text-sm mb-6">
                 Producción y Fabricación
               </p>
-              <p className="text-gray-600 text-base leading-relaxed">
-                Gabriel es el responsable del proceso de elaboración de las alfombras. Entre sus tareas se encuentran trasladar el diseño al bastidor, realizar el tufteado, recortar la alfombra del lienzo y aplicar la base de tela que se adhiere al piso.
-              </p>
             </div>
           </div>
 
@@ -51,9 +48,6 @@ const TeamSection = () => {
               <h3 className="text-gray-800 text-xl font-bold mt-6 mb-1">Luciana Giné</h3>
               <p className="text-blue-600 font-semibold uppercase tracking-wide text-sm mb-6">
                 Gestión y Contenido
-              </p>
-              <p className="text-gray-600 text-base leading-relaxed">
-                Luciana se encarga de la gestión del taller, controlando el ovillado de lana, el stock y el estado de los materiales. Además, es la responsable de la comunicación del emprendimiento, creando y gestionando el contenido para nuestras redes sociales, especialmente en Instagram.
               </p>
             </div>
           </div>
