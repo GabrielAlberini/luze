@@ -7,7 +7,7 @@ const InfoSection = () => {
   const pricePerSquareMeter = 330000; // precio base por m²
 
   const areaInM2 = (width / 100) * (height / 100);
-  const estimatedPrice = areaInM2 * pricePerSquareMeter;
+  const estimatedPrice = Math.round(areaInM2 * pricePerSquareMeter / 100) * 100;
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100 border-t border-gray-200">
