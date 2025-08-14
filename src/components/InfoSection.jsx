@@ -90,14 +90,14 @@ const InfoSection = () => {
 
         {/* Footer */}
         <div
-          className="text-center p-8 rounded-xl shadow-sm border border-gray-200 bg-cover bg-center bg-[#0128ff]"
+          className="text-center p-8 rounded-xl shadow-sm border border-gray-200 bg-cover bg-center bg-white"
         >
-          <p className="text-white text-lg mb-6 max-w-2xl mx-auto">
+          <p className="text-lg mb-6 max-w-2xl mx-auto">
             Escribinos por WhatsApp y contanos tu idea. Podemos ayudarte a elegir colores, tamaños y diseño para que tu alfombra sea perfecta.
           </p>
           <a
             href={`https://wa.me/543498528087?text=Hola Luzé! Me gustaría conocer más sobre sus alfombras artesanales. Mi presupuesto estimado es de $${estimatedPrice.toLocaleString('es-AR')}.`}
-            className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-medium text-lg rounded-md transition-all duration-300 hover:bg-blue-50 hover:-translate-y-0.5 hover:shadow-md"
+            className="inline-flex items-center justify-center px-8 py-4 bg-[#0128ff] text-white font-medium text-lg rounded-md transition-all duration-300 hover:bg-[#0128ff] hover:-translate-y-0.5 hover:shadow-md"
             target="_blank"
             rel="noopener noreferrer"
           >
