@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Permitir acceso a recursos estáticos
+Allow: /logo.png
+Allow: /favicon.ico
+Allow: /assets/
+
+# Bloquear acceso al panel de administración
+Disallow: /admin
+Disallow: /admin/
+Disallow: /admin/add
+Disallow: /admin/edit/
+
+# Bloquear acceso a archivos de configuración
+Disallow: /vercel.json
+Disallow: /package.json
+Disallow: /package-lock.json
+
+# Sitemap
+Sitemap: https://www.luzerugs.com.ar/sitemap.xml
