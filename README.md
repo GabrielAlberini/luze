@@ -59,7 +59,6 @@ Ubicados en **San Justo, Santa Fe, Argentina**, trabajamos con pasión para crea
 
 - **Sitio Web**: [www.luzerugs.com.ar](https://www.luzerugs.com.ar)
 - **Instagram**: [@luze.rugs](https://www.instagram.com/luze.rugs)
-- **WhatsApp**: +54 349 852-8087
 - **Email**: info@luzgrugs.com.ar
 
 ---
@@ -101,15 +100,10 @@ Cada alfombra pasa por un cuidadoso proceso:
 
 **¿Listo para transformar tu espacio?**
 
-- 📱 **WhatsApp**: [+54 349 852-8087](https://wa.me/543498528087?text=Hola%20Luzé!%20me%20gustaría%20conocer%20más%20sobre%20sus%20alfombras%20artesanales.)
 - 📧 **Email**: info@luzgrugs.com.ar
 - 📍 **Ubicación**: San Justo, Santa Fe, Argentina
 - 🌐 **Web**: [luzerugs.com.ar](https://www.luzerugs.com.ar)
 
 ---
 
-*Transformamos espacios, creamos arte, tejemos sueños* ✨
-
----
-
-**© 2024 Luzé Rugs - Todos los derechos reservados**
+**© 2025 Luzé Rugs - Todos los derechos reservados**
