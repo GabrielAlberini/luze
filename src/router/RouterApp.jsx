@@ -5,6 +5,8 @@ import AdminDashboard from "../pages/AdminDashboard";
 import EditCarpet from "../pages/EditCarpet";
 import ProtectedRoute from "../components/ProtectedRoute";
 import LoginPage from "../pages/LoginPage";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+import TermsOfService from "../pages/TermsOfService";
 
 function RouterApp() {
   return (
@@ -12,6 +14,8 @@ function RouterApp() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/privacidad" element={<PrivacyPolicy />} />
+        <Route path="/terminos" element={<TermsOfService />} />
         <Route
           path="/admin"
           element={
