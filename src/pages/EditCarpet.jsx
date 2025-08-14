@@ -14,7 +14,7 @@ const EditCarpet = () => {
 
   useEffect(() => {
     if (carpets.length > 0) {
-      const foundCarpet = carpets.find(c => c.id === id);
+      const foundCarpet = carpets.find((c) => c.id === id);
       if (foundCarpet) {
         setCarpet(foundCarpet);
       } else {
@@ -39,9 +39,9 @@ const EditCarpet = () => {
   if (carpetsLoading) {
     return (
       <AdminLayout>
-        <div className="loading-container">
-          <div className="loading-spinner"></div>
-          <p>Cargando datos de la alfombra...</p>
+        <div className="text-center py-20">
+          <div className="w-10 h-10 border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-gray-600">Cargando datos de la alfombra...</p>
         </div>
       </AdminLayout>
     );
@@ -50,9 +50,12 @@ const EditCarpet = () => {
   if (!carpet) {
     return (
       <AdminLayout>
-        <div className="error-container">
-          <h2>Alfombra no encontrada</h2>
-          <button onClick={() => navigate('/admin')} className="btn btn-primary">
+        <div className="text-center py-20 bg-white rounded-lg shadow-sm border border-gray-200 p-8 max-w-md mx-auto">
+          <h2 className="text-red-600 text-xl font-bold mb-4">Alfombra no encontrada</h2>
+          <button
+            onClick={() => navigate('/admin')}
+            className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-800 transition"
+          >
             Volver al catálogo
           </button>
         </div>

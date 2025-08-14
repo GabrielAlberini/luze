@@ -29,7 +29,7 @@ const HomePage = () => {
   }, [carpets, selectedCategory, showAvailable, searchTerm]);
 
   return (
-    <div className="App">
+    <div className="min-h-screen flex flex-col bg-white text-gray-800">
       <Seo
         title="Luzé Rugs | Fabrica de alfombras artesanales"
         description="Explorá nuestra colección de alfombras tufting hechas a mano. Diseños únicos, arte textil y decoración moderna."
@@ -37,17 +37,21 @@ const HomePage = () => {
       <Header />
       <HeroSection />
       <TeamSection />
-      <FilterBar
-        categories={categories}
-        selectedCategory={selectedCategory}
-        onCategoryChange={setSelectedCategory}
-        showAvailable={showAvailable}
-        onAvailabilityChange={setShowAvailable}
-        searchTerm={searchTerm}
-        onSearchChange={setSearchTerm}
-      />
-      <CatalogSection carpets={filteredCarpets} loading={loading} />
-      <InfoSection />
+      <div className="bg-gray-50 border-b border-gray-200">
+        <FilterBar
+          categories={categories}
+          selectedCategory={selectedCategory}
+          onCategoryChange={setSelectedCategory}
+          showAvailable={showAvailable}
+          onAvailabilityChange={setShowAvailable}
+          searchTerm={searchTerm}
+          onSearchChange={setSearchTerm}
+        />
+      </div>
+      <main className="flex-1">
+        <CatalogSection carpets={filteredCarpets} loading={loading} />
+        <InfoSection />
+      </main>
       <Footer />
     </div>
   );

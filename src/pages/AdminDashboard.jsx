@@ -15,7 +15,6 @@ const AdminDashboard = () => {
         const urlParts = imageUrl.split('/');
         const uploadIndex = urlParts.findIndex(part => part === 'upload');
         if (uploadIndex !== -1 && urlParts[uploadIndex + 2]) {
-          // Obtener el public_id (sin extensión)
           const publicIdWithExt = urlParts.slice(uploadIndex + 2).join('/');
           imagePublicId = publicIdWithExt.split('.')[0];
         }
@@ -37,10 +36,15 @@ const AdminDashboard = () => {
           description="Ocurrió un error al cargar los datos del panel de administración."
           noIndex={true}
         />
-        <div className="error-container">
-          <h2>Error al cargar los datos</h2>
-          <p>{error}</p>
-          <button onClick={refreshCarpets} className="btn btn-primary">
+        <div className="flex flex-col items-center justify-center gap-4 py-12">
+          <h2 className="text-2xl font-bold text-red-600">
+            Error al cargar los datos
+          </h2>
+          <p className="text-gray-600 text-center max-w-md">{error}</p>
+          <button
+            onClick={refreshCarpets}
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+          >
             Reintentar
           </button>
         </div>
