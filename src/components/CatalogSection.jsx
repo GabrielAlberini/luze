@@ -4,33 +4,44 @@ import Pagination from './Pagination';
 
 const CatalogSection = ({ carpets, loading }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6;
+  const [itemsPerPage, setItemsPerPage] = useState(6);
 
-  // Calcular las alfombras para la página actual
+  // Detectar tamaño de pantalla y ajustar items por página
+  useEffect(() => {
+    const updateItemsPerPage = () => {
+      if (window.innerWidth <= 640) {
+        setItemsPerPage(3); // Móvil
+      } else {
+        setItemsPerPage(6); // Pantallas más grandes
+      }
+    };
+
+    updateItemsPerPage(); // Ejecutar al montar
+    window.addEventListener('resize', updateItemsPerPage);
+
+    return () => window.removeEventListener('resize', updateItemsPerPage);
+  }, []);
+
   const paginatedCarpets = useMemo(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     return carpets.slice(startIndex, endIndex);
-  }, [carpets, currentPage]);
+  }, [carpets, currentPage, itemsPerPage]);
 
-  // Calcular el total de páginas
   const totalPages = Math.ceil(carpets.length / itemsPerPage);
 
-  // Resetear a la primera página cuando cambian los filtros
   useEffect(() => {
     setCurrentPage(1);
-  }, [carpets.length]);
+  }, [carpets.length, itemsPerPage]);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    // Scroll suave hacia arriba del catálogo
     document.getElementById('catalogo')?.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     });
   };
 
-  // Calcular información de paginación
   const startItem = (currentPage - 1) * itemsPerPage + 1;
   const endItem = Math.min(currentPage * itemsPerPage, carpets.length);
 
@@ -55,7 +66,6 @@ const CatalogSection = ({ carpets, loading }) => {
   return (
     <section className="py-20" id="catalogo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Encabezado */}
         <div className="text-center mb-12">
           <h2 className="text-gray-800 text-3xl font-bold mb-4">Nuestro Catálogo</h2>
           <div className="text-gray-400 text-sm font-medium">
@@ -69,14 +79,12 @@ const CatalogSection = ({ carpets, loading }) => {
           </div>
         </div>
 
-        {/* Grid de alfombras */}
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {paginatedCarpets.map((carpet) => (
             <CarpetCard key={carpet.id} carpet={carpet} />
           ))}
         </div>
 
-        {/* Paginación */}
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}

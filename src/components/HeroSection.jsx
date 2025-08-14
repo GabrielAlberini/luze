@@ -1,8 +1,10 @@
+import fondo from '../assets/fondo-mobile.jpeg';
+
 const HeroSection = () => {
   return (
     <section
       className="relative bg-cover bg-center min-h-[70vh] flex items-center overflow-hidden"
-      style={{ backgroundImage: 'url("./assets/fondo-mobile.jpeg")' }}
+      style={{ backgroundImage: `url(${fondo})` }}
     >
       <div className="relative z-10 flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
