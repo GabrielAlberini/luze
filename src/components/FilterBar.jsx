@@ -12,12 +12,14 @@ const FilterBar = ({
   return (
     <div
       id="filters"
-      className="bg-gray-50 py-8 border-b border-gray-200"
+      className="bg-gray-50 py-6 border-b border-gray-200"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap gap-6 items-center justify-between">
+        {/* Contenedor adaptable */}
+        <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:gap-6 sm:items-center sm:justify-between">
+
           {/* Buscador */}
-          <div className="flex-1 min-w-[250px]">
+          <div className="w-full sm:flex-1 min-w-[250px]">
             <input
               type="text"
               placeholder="Buscar alfombras..."
@@ -28,7 +30,8 @@ const FilterBar = ({
           </div>
 
           {/* Filtros */}
-          <div className="flex flex-wrap gap-6 items-center">
+          <div className="flex flex-row gap-4 sm:flex-row sm:flex-wrap sm:gap-6 sm:items-center w-full sm:w-auto">
+
             {/* Categoría */}
             <div className="flex items-center gap-2">
               <label htmlFor="category" className="font-medium text-gray-800 whitespace-nowrap">
@@ -50,7 +53,7 @@ const FilterBar = ({
             </div>
 
             {/* Disponibilidad */}
-            <div className="flex items-center gap-2 cursor-pointer">
+            <label className="flex items-center gap-2 cursor-pointer">
               <input
                 type="checkbox"
                 checked={showAvailable}
@@ -58,7 +61,7 @@ const FilterBar = ({
                 className="w-4 h-4 accent-blue-600"
               />
               <span className="font-medium text-gray-800">Solo disponibles</span>
-            </div>
+            </label>
           </div>
         </div>
       </div>

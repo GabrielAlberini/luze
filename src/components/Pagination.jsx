@@ -7,28 +7,23 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     const maxVisiblePages = 5;
 
     if (totalPages <= maxVisiblePages) {
-      // Si hay 5 páginas o menos, mostrar todas
       for (let i = 1; i <= totalPages; i++) {
         pages.push(i);
       }
     } else {
-      // Si hay más de 5 páginas, mostrar páginas inteligentemente
       if (currentPage <= 3) {
-        // Estamos cerca del inicio
         for (let i = 1; i <= 4; i++) {
           pages.push(i);
         }
         pages.push('...');
         pages.push(totalPages);
       } else if (currentPage >= totalPages - 2) {
-        // Estamos cerca del final
         pages.push(1);
         pages.push('...');
         for (let i = totalPages - 3; i <= totalPages; i++) {
           pages.push(i);
         }
       } else {
-        // Estamos en el medio
         pages.push(1);
         pages.push('...');
         for (let i = currentPage - 1; i <= currentPage + 1; i++) {
@@ -47,7 +42,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   return (
     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
       {/* Información de páginas */}
-      <div className="text-sm text-gray-500 order-2 sm:order-1">
+      <div className="text-sm text-gray-500 order-2 sm:order-1 text-center">
         Página {currentPage} de {totalPages}
       </div>
 
@@ -57,7 +52,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         <button
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className="flex items-center gap-1 px-2 sm:px-3 py-2 text-xs sm:text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="flex items-center justify-center gap-1 px-2 sm:px-3 py-2 text-xs sm:text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           aria-label="Página anterior"
         >
           <ChevronLeft size={14} className="sm:w-4 sm:h-4" />
@@ -65,7 +60,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         </button>
 
         {/* Números de página */}
-        <div className="flex items-center gap-1">
+        <div className="flex items-center justify-center gap-1">
           {getPageNumbers().map((page, index) => (
             <React.Fragment key={index}>
               {page === '...' ? (
@@ -91,7 +86,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         <button
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="flex items-center gap-1 px-2 sm:px-3 py-2 text-xs sm:text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="flex items-center justify-center gap-1 px-2 sm:px-3 py-2 text-xs sm:text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           aria-label="Página siguiente"
         >
           <span className="hidden sm:inline">Siguiente</span>
