@@ -49,7 +49,7 @@ const CarpetTable = ({ carpets, onDelete, loading }) => {
           </div>
           <button
             onClick={() => navigate('/admin/add')}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
           >
             <Plus className="w-4 h-4" />
             Agregar Alfombra
@@ -75,7 +75,9 @@ const CarpetTable = ({ carpets, onDelete, loading }) => {
           {/* Filtros */}
           <div className="flex flex-col sm:flex-row gap-3">
             <div className="flex items-center gap-2">
-              <Filter className="text-gray-500 w-4 h-4" />
+              <div className="flex items-center justify-center">
+                <Filter className="text-gray-500 w-4 h-4" />
+              </div>
               <select
                 value={filterCategory}
                 onChange={(e) => setFilterCategory(e.target.value)}
@@ -110,8 +112,8 @@ const CarpetTable = ({ carpets, onDelete, loading }) => {
       {/* Contenido */}
       {filteredCarpets.length === 0 ? (
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 text-center">
-          <div className="text-gray-400 mb-4">
-            <Search className="w-12 h-12 mx-auto" />
+          <div className="flex items-center justify-center text-gray-400 mb-4">
+            <Search className="w-12 h-12" />
           </div>
           <h3 className="text-lg font-semibold text-gray-600 mb-2">No se encontraron alfombras</h3>
           <p className="text-gray-500">Prueba cambiando los filtros de búsqueda</p>
@@ -179,11 +181,10 @@ const CarpetTable = ({ carpets, onDelete, loading }) => {
                     </td>
                     <td className="px-6 py-4 border-b">
                       <span
-                        className={`px-3 py-1 rounded-full text-xs font-semibold uppercase ${
-                          carpet.available
+                        className={`px-3 py-1 rounded-full text-xs font-semibold uppercase ${carpet.available
                             ? 'bg-green-100 text-green-800'
                             : 'bg-red-100 text-red-800'
-                        }`}
+                          }`}
                       >
                         {carpet.available ? 'Disponible' : 'Vendida'}
                       </span>
@@ -192,14 +193,14 @@ const CarpetTable = ({ carpets, onDelete, loading }) => {
                       <div className="flex gap-2">
                         <button
                           onClick={() => navigate(`/admin/edit/${carpet.id}`)}
-                          className="p-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
+                          className="flex items-center justify-center p-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
                           title="Editar"
                         >
                           <Edit className="w-4 h-4" />
                         </button>
                         <button
                           onClick={() => handleDelete(carpet)}
-                          className="p-2 bg-red-100 text-red-600 rounded-lg hover:bg-red-200 transition-colors"
+                          className="flex items-center justify-center p-2 bg-red-100 text-red-600 rounded-lg hover:bg-red-200 transition-colors"
                           title="Eliminar"
                         >
                           <Trash2 className="w-4 h-4" />
@@ -254,11 +255,10 @@ const CarpetTable = ({ carpets, onDelete, loading }) => {
                           {carpet.category}
                         </span>
                         <span
-                          className={`px-2 py-1 rounded-full text-xs font-semibold uppercase ${
-                            carpet.available
+                          className={`px-2 py-1 rounded-full text-xs font-semibold uppercase ${carpet.available
                               ? 'bg-green-100 text-green-800'
                               : 'bg-red-100 text-red-800'
-                          }`}
+                            }`}
                         >
                           {carpet.available ? 'Disponible' : 'Vendida'}
                         </span>
@@ -271,14 +271,14 @@ const CarpetTable = ({ carpets, onDelete, loading }) => {
                         <div className="flex gap-2">
                           <button
                             onClick={() => navigate(`/admin/edit/${carpet.id}`)}
-                            className="p-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
+                            className="flex items-center justify-center p-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
                             title="Editar"
                           >
                             <Edit className="w-4 h-4" />
                           </button>
                           <button
                             onClick={() => handleDelete(carpet)}
-                            className="p-2 bg-red-100 text-red-600 rounded-lg hover:bg-red-200 transition-colors"
+                            className="flex items-center justify-center p-2 bg-red-100 text-red-600 rounded-lg hover:bg-red-200 transition-colors"
                             title="Eliminar"
                           >
                             <Trash2 className="w-4 h-4" />
