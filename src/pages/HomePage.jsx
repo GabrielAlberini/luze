@@ -36,7 +36,7 @@ const HomePage = () => {
       />
       <Header />
       <HeroSection />
-      <TeamSection />
+      {/* <TeamSection /> */}
       <div className="bg-gray-50 border-b border-gray-200">
         <FilterBar
           categories={categories}

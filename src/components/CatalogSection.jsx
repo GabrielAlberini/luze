@@ -10,7 +10,7 @@ const CatalogSection = ({ carpets, loading }) => {
   useEffect(() => {
     const updateItemsPerPage = () => {
       if (window.innerWidth <= 640) {
-        setItemsPerPage(3); // Móvil
+        setItemsPerPage(6); // Móvil
       } else {
         setItemsPerPage(6); // Pantallas más grandes
       }
@@ -79,7 +79,7 @@ const CatalogSection = ({ carpets, loading }) => {
           </div>
         </div>
 
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3">
           {paginatedCarpets.map((carpet) => (
             <CarpetCard key={carpet.id} carpet={carpet} />
           ))}

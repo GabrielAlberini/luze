@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { X, ZoomIn } from 'lucide-react';
 
-const ImageModal = ({ isOpen, imageUrl, imageAlt, onClose }) => {
+const ImageModal = ({ isOpen, imageUrl, imageAlt, description, onClose }) => {
   // Cerrar modal con ESC
   useEffect(() => {
     const handleEscape = (e) => {
@@ -48,13 +48,20 @@ const ImageModal = ({ isOpen, imageUrl, imageAlt, onClose }) => {
           <img
             src={imageUrl}
             alt={imageAlt}
-            className="w-full h-auto max-h-[85vh] object-contain"
+            className="w-full h-auto max-h-[70vh] object-contain"
             loading="lazy"
             draggable="false"
           />
+
+          {/* Descripción */}
+          {description && (
+            <div className="p-4 bg-white text-gray-700 text-sm text-center">
+              {description}
+            </div>
+          )}
         </div>
 
-        {/* Footer con información */}
+        {/* Footer con info */}
         <div className="mt-4 text-center">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-white text-sm opacity-90">
             <p className="flex items-center gap-1">

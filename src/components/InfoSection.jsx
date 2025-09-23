@@ -78,7 +78,7 @@ const InfoSection = () => {
               />
             </label>
 
-            <div className="mt-4 text-xl font-bold text-blue-800 bg-gray-100 py-3 rounded-md">
+            <div className="mt-4 text-xl p-3 font-bold text-blue-800 bg-gray-100 py-3 rounded-md">
               <strong>Precio estimado:</strong> ${estimatedPrice.toLocaleString('es-AR')}
               <span className="block text-sm font-normal text-gray-600 mt-1">
                 Incluye mano de obra y materiales. Este presupuesto podrá ajustarse según la complejidad del diseño.
