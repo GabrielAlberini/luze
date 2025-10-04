@@ -18,7 +18,7 @@ const CarpetCard = ({ carpet }) => {
         {/* Imagen */}
         <div className="relative aspect-square overflow-hidden group">
           <div
-            className="w-full h-full bg-center bg-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+            className="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105 group-hover:blur-[1px] cursor-pointer"
             style={{ backgroundImage: `url(${carpet.image})` }}
             onClick={handleImageClick}
           />
@@ -35,8 +35,9 @@ const CarpetCard = ({ carpet }) => {
             </div>
           )}
 
+          {/* Badge disponibilidad */}
           <div
-            className={`absolute top-2 right-2 px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase ${carpet.available ? "bg-green-600" : "bg-red-600"
+            className={`absolute top-2 right-2 px-3 py-1 rounded-full text-[11px] font-bold tracking-wide uppercase shadow-sm ${carpet.available ? "bg-green-500" : "bg-red-500"
               } text-white`}
           >
             {carpet.available ? "Disponible" : "Vendida"}
@@ -44,30 +45,32 @@ const CarpetCard = ({ carpet }) => {
         </div>
 
         {/* Contenido */}
-        <div className="flex flex-col flex-1 p-3 sm:p-5">
-          <div className="flex justify-between items-start mb-2">
-            <h3 className="text-sm sm:text-base font-semibold text-gray-800 truncate">
+        <div className="flex flex-col flex-1 p-4 sm:p-6">
+          {/* Título */}
+          <div className="flex justify-between items-start mb-3">
+            <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900 tracking-tight">
               {carpet.name}
             </h3>
           </div>
 
-          <div className="mt-auto space-y-2">
-            <span className="block text-base sm:text-lg font-bold text-blue-600">
+          {/* Precio + Botón */}
+          <div className="mt-auto space-y-3">
+            <span className="block text-lg font-semibold text-gray-700">
               ${carpet.price}
             </span>
 
             {carpet.available ? (
               <a
                 href={`https://wa.me/543498528087?text=Hola Luzé! estoy interesado en la alfombra ${carpet.name}.`}
-                className="w-full inline-flex items-center justify-center px-3 py-2 bg-blue-600 text-white text-xs sm:text-sm font-medium rounded-md transition-all duration-300 hover:bg-blue-800 hover:-translate-y-0.5 hover:shadow-md"
+                className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white text-sm sm:text-base font-medium rounded-full shadow-sm transition-all duration-300 hover:bg-blue-700 hover:shadow-md hover:-translate-y-0.5"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Consultar
-                <MessageSquareHeart size={16} className="ml-1" />
+                <MessageSquareHeart size={18} className="ml-2" />
               </a>
             ) : (
-              <span className="w-full inline-flex items-center justify-center px-3 py-2 bg-gray-400 text-white text-xs sm:text-sm font-medium rounded-md cursor-not-allowed">
+              <span className="w-full inline-flex items-center justify-center px-4 py-2 bg-gray-400 text-white text-sm sm:text-base font-medium rounded-full cursor-not-allowed">
                 No disponible
               </span>
             )}
