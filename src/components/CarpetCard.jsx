@@ -55,7 +55,7 @@ const CarpetCard = ({ carpet }) => {
 
           {/* Precio + Botón */}
           <div className="mt-auto space-y-3">
-            <span className="block text-lg font-semibold text-gray-700">
+            <span className="block text-lg font-semibold text-gray-500">
               ${carpet.price}
             </span>
 
